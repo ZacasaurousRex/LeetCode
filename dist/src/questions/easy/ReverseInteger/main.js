@@ -43,14 +43,13 @@ function run() {
     var integerInput = parseInt(input);
     logQuestionetails(integerInput);
 
-    timer();
-    var correctAnswer = (0, _answer2.default)(integerInput);
-
-    var userAttempt = (0, _attempt2.default)(input);
-    var userPassed = (0, _utils.arraysEqual)(correctAnswer, userAttempt);
+    var attemptAnswer = (0, _utils.timeFunction)('Attempt', _attempt2.default, [input]);
+    var correctAnswer = (0, _utils.timeFunction)('Answer', _answer2.default, [integerInput]);
+    var userPassed = (0, _utils.arraysEqual)(correctAnswer, attemptAnswer);
 
     return {
         passed: userPassed,
+        attempt: attemptAnswer,
         answer: correctAnswer
     };
 }
