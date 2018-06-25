@@ -1,0 +1,25 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "A node project containing my solutions to leetcode questions.",
+  "main": "main.js",
+  "scripts": {
+    "lint": "eslint ./Questions/ && eslint ./main.js",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run lint && npm run build && node dist/main.js"
+  },
+  "author": "Zac Rivera",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "find": "^0.2.9",
+    "wepack": "0.0.1"
+  }
+}
