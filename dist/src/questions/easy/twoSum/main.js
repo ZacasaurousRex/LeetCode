@@ -26,9 +26,7 @@ var inputTarget = process.argv[4];
 function logQuestionDetails(nums, target) {
     (0, _utils.log)('Given an array of integers, return indices of the two numbers such that' + 'they add up to a specific target. You may assume that each input would ' + 'have exactly one solution, and you may not use the same element twice.');
     (0, _utils.log)('\nExample: Given nums = [2, 7, 11, 15], target = 9, ' + 'Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].');
-    (0, _utils.log)('Input:');
-    (0, _utils.log)('\tNums: ' + nums);
-    (0, _utils.log)('\tTarget: ' + target + '\n');
+    (0, _utils.logUserInput)({ nums: nums, target: target });
 }
 
 function verifyQuestionConformance() {

@@ -1,7 +1,7 @@
 import answer from './answer';
 import devWork from './devEnv';
 import {
-    log, verifyInputConformance, expectedInputErrorMessage, arraysEqual,
+    log, verifyInputConformance, expectedInputErrorMessage, arraysEqual, logUserInput,
 } from '../../../utils';
 
 const questionName = 'TwoSum';
@@ -15,9 +15,7 @@ function logQuestionDetails(nums, target) {
     + 'have exactly one solution, and you may not use the same element twice.');
     log('\nExample: Given nums = [2, 7, 11, 15], target = 9, '
     + 'Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].');
-    log('Input:');
-    log(`\tNums: ${nums}`);
-    log(`\tTarget: ${target}\n`);
+    logUserInput({nums: nums, target: target});
 }
 
 export function verifyQuestionConformance() {
