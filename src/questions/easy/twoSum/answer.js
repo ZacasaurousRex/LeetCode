@@ -1,4 +1,4 @@
-import { hasOwnProperty } from '../../utils';
+import { hasOwnProperty } from '../../../utils';
 
 export default function twoSum(nums, target) {
     const indexNumsMap = {};

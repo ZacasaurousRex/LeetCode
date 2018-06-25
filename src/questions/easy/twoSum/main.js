@@ -2,7 +2,7 @@ import answer from './answer';
 import devWork from './devEnv';
 import {
     log, verifyInputConformance, expectedInputErrorMessage, arraysEqual,
-} from '../../utils';
+} from '../../../utils';
 
 const questionName = 'TwoSum';
 const numsInputExample = [2, 7, 11, 15];

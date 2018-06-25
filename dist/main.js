@@ -4,7 +4,7 @@ var _find = require('find');
 
 var _find2 = _interopRequireDefault(_find);
 
-var _utils = require('./Questions/utils');
+var _utils = require('./src/utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -60,9 +60,10 @@ function runFile(files) {
 }
 
 if (typeof fileToFind !== 'undefined') {
-    _find2.default.file('Questions', runFile).error(function (err) {
+    _find2.default.file('src/questions', runFile).error(function (err) {
         if (err) {
             (0, _utils.log)('There was an error finding the file:');
+            (0, _utils.log)(err);
         }
     });
 } else {

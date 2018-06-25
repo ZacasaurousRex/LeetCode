@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = twoSum;
 
-var _utils = require('../../utils');
+var _utils = require('../../../utils');
 
 function twoSum(nums, target) {
     var indexNumsMap = {};

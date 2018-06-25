@@ -1,5 +1,5 @@
 import find from 'find';
-import { log, convertWindowsPathToUnix } from './Questions/utils';
+import { log, convertWindowsPathToUnix } from './src/utils';
 
 const fileToFind = process.argv[2];
 const uiBreak = '====================================';
@@ -53,10 +53,11 @@ function runFile(files) {
 }
 
 if (typeof fileToFind !== 'undefined') {
-    find.file('Questions', runFile)
+    find.file('src/questions', runFile)
         .error((err) => {
             if (err) {
                 log('There was an error finding the file:');
+                log(err);
             }
         });
 } else {
