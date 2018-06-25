@@ -19,6 +19,28 @@ function questionMainFileExists(currentFile) {
     return questionFolderExists && questionExecutabelExists;
 }
 
+function logResults(result) {
+    if (result.passed === false) {
+        (0, _utils.log)('Sorry, but you\'re attempt did not pass. Please try again.\n');
+        if (typeof result.attempt !== 'undefined') {
+            (0, _utils.log)('Your answer was:');
+            (0, _utils.log)(result.attempt);
+        }
+        if (typeof result.attemptTime !== 'undefined') {
+            (0, _utils.log)('Attempt time took: ' + result.correctTime + 'ms');
+        }
+        if (typeof result.answer !== 'undefined') {
+            (0, _utils.log)('The correct answer was:\n' + result.answer);
+        }
+        if (typeof result.correctTime !== 'undefined') {
+            (0, _utils.log)('Answer time took: ' + result.correctTime + 'ms');
+        }
+    } else if (result.passed === true) {
+        (0, _utils.log)('Question passed. Your answer was:');
+        (0, _utils.log)(result.attempt);
+    }
+}
+
 function runFile(files) {
     (0, _utils.log)('\n' + uiBreak);
     for (var index = 0; index < files.length; index++) {
@@ -40,19 +62,7 @@ function runFile(files) {
                 process.exit();
             }
             var result = fileToRun.run();
-            if (result.passed === false) {
-                (0, _utils.log)('Sorry, but you\'re attempt did not pass. Please try again.\n');
-                if (typeof result.attempt !== 'undefined') {
-                    (0, _utils.log)('Your answer was:');
-                    (0, _utils.log)(result.attempt);
-                }
-                if (typeof result.answer !== 'undefined') {
-                    (0, _utils.log)('The correct answer was:\n' + result.answer);
-                }
-            } else if (result.passed === true) {
-                (0, _utils.log)('Question passed. Your answer was:');
-                (0, _utils.log)(result.attempt);
-            }
+            logResults(result);
             break;
         }
     }

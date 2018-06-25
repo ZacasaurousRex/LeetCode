@@ -12,6 +12,28 @@ function questionMainFileExists(currentFile) {
     return questionFolderExists && questionExecutabelExists;
 }
 
+function logResults(result) {
+    if (result.passed === false) {
+        log('Sorry, but you\'re attempt did not pass. Please try again.\n');
+        if (typeof result.attempt !== 'undefined') {
+            log('Your answer was:');
+            log(result.attempt);
+        }
+        if (typeof result.attemptTime !== 'undefined') {
+            log(`Attempt time took: ${result.correctTime}ms`);
+        }
+        if (typeof result.answer !== 'undefined') {
+            log(`The correct answer was:\n${result.answer}`);
+        }
+        if (typeof result.correctTime !== 'undefined') {
+            log(`Answer time took: ${result.correctTime}ms`);
+        }
+    } else if (result.passed === true) {
+        log('Question passed. Your answer was:');
+        log(result.attempt);
+    }
+}
+
 function runFile(files) {
     log(`\n${uiBreak}`);
     for (let index = 0; index < files.length; index++) {
@@ -33,19 +55,7 @@ function runFile(files) {
                 process.exit();
             }
             const result = fileToRun.run();
-            if (result.passed === false) {
-                log('Sorry, but you\'re attempt did not pass. Please try again.\n');
-                if (typeof result.attempt !== 'undefined') {
-                    log('Your answer was:');
-                    log(result.attempt);
-                }
-                if (typeof result.answer !== 'undefined') {
-                    log(`The correct answer was:\n${result.answer}`);
-                }
-            } else if (result.passed === true) {
-                log('Question passed. Your answer was:');
-                log(result.attempt);
-            }
+            logResults(result);
             break;
         }
     }

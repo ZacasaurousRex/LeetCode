@@ -2,6 +2,13 @@ export function log(string) {
     console.log(string);
 }
 
+export function timeFunction(label, callback, arrayOfArguments) {
+    console.time(`${label} took`);
+    const result = callback.apply(null, arrayOfArguments);
+    console.timeEnd(`${label} took`);
+    return result;
+}
+
 export function hasOwnProperty(object, key) {
     return Object.prototype.hasOwnProperty.call(object, key);
 }

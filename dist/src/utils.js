@@ -4,6 +4,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.log = log;
+exports.timeFunction = timeFunction;
 exports.hasOwnProperty = hasOwnProperty;
 exports.arraysEqual = arraysEqual;
 exports.convertWindowsPathToUnix = convertWindowsPathToUnix;
@@ -12,6 +13,13 @@ exports.expectedInputErrorMessage = expectedInputErrorMessage;
 exports.verifyInputConformance = verifyInputConformance;
 function log(string) {
     console.log(string);
+}
+
+function timeFunction(label, callback, arrayOfArguments) {
+    console.time(label + ' took');
+    var result = callback.apply(null, arrayOfArguments);
+    console.timeEnd(label + ' took');
+    return result;
 }
 
 function hasOwnProperty(object, key) {

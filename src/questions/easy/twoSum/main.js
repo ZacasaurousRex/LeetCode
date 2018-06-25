@@ -1,7 +1,7 @@
 import answer from './answer';
-import devWork from './devEnv';
+import attempt from './attempt';
 import {
-    log, verifyInputConformance, expectedInputErrorMessage, arraysEqual, logUserInput,
+    log, verifyInputConformance, expectedInputErrorMessage, arraysEqual, logUserInput, timeFunction,
 } from '../../../utils';
 
 const questionName = 'TwoSum';
@@ -13,9 +13,8 @@ function logQuestionDetails(nums, target) {
     log('Given an array of integers, return indices of the two numbers such that'
     + 'they add up to a specific target. You may assume that each input would '
     + 'have exactly one solution, and you may not use the same element twice.');
-    log('\nExample: Given nums = [2, 7, 11, 15], target = 9, '
-    + 'Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].');
-    logUserInput({nums: nums, target: target});
+    log('\nExample: Given nums = [2, 7, 11, 15], target = 9, because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].');
+    logUserInput({ nums, target });
 }
 
 export function verifyQuestionConformance() {
@@ -38,13 +37,13 @@ export function run() {
     const target = parseInt(inputTarget);
     logQuestionDetails(nums, target);
 
-    const twoSumAttempt = devWork(nums, target);
-    const correctAnswer = answer(nums, target);
-    const userPassed = arraysEqual(twoSumAttempt, correctAnswer);
+    const attemptAnswer = timeFunction('Attempt', attempt, [nums, target]);
+    const correctAnswer = timeFunction('Answer', answer, [nums, target]);
+    const userPassed = arraysEqual(attemptAnswer, correctAnswer);
 
     return {
         passed: userPassed,
+        attempt: `[${attemptAnswer}]`,
         answer: `[${correctAnswer}]`,
-        attempt: `[${twoSumAttempt}]`,
     };
 }
