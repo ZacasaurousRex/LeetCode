@@ -4,21 +4,23 @@ import {
     log, verifyInputConformance, expectedInputErrorMessage, logUserInput, timeFunction,
 } from '../../../utils';
 
-const questionName = 'ReverseInteger';
+const questionName = 'PalindromeNumber';
 const input = process.argv[3];
 const inputExample = 123;
 
 function logQuestionetails(integerInput) {
-    log('Given a 32-bit signed integer, reverse digits of an integer.');
+    log('Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.');
     log('Example 1:\n'
-        + '\tInput: 123\n'
-        + '\tOutput: 321');
+        + '\tInput: 121\n'
+        + '\tOutput: true');
     log('Example 2:\n'
-        + '\tInput: -123\n'
-        + '\tOutput: -321');
+        + '\tInput: -121\n'
+        + '\tOutput: false\n'
+        + '\tExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.');
     log('Example 3:\n'
-        + '\tInput: 120\n'
-        + '\tOutput: 21');
+        + '\tInput: 10\n'
+        + '\tOutput: false\n'
+        + '\tExplanation: Reads 01 from right to left. Therefore it is not a palindrome.');
     logUserInput({ Input: integerInput });
 }
 

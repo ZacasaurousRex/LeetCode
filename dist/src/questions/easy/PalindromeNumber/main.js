@@ -18,15 +18,15 @@ var _utils = require('../../../utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var questionName = 'ReverseInteger';
+var questionName = 'PalindromeNumber';
 var input = process.argv[3];
 var inputExample = 123;
 
 function logQuestionetails(integerInput) {
-    (0, _utils.log)('Given a 32-bit signed integer, reverse digits of an integer.');
-    (0, _utils.log)('Example 1:\n' + '\tInput: 123\n' + '\tOutput: 321');
-    (0, _utils.log)('Example 2:\n' + '\tInput: -123\n' + '\tOutput: -321');
-    (0, _utils.log)('Example 3:\n' + '\tInput: 120\n' + '\tOutput: 21');
+    (0, _utils.log)('Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.');
+    (0, _utils.log)('Example 1:\n' + '\tInput: 121\n' + '\tOutput: true');
+    (0, _utils.log)('Example 2:\n' + '\tInput: -121\n' + '\tOutput: false\n' + '\tExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.');
+    (0, _utils.log)('Example 3:\n' + '\tInput: 10\n' + '\tOutput: false\n' + '\tExplanation: Reads 01 from right to left. Therefore it is not a palindrome.');
     (0, _utils.logUserInput)({ Input: integerInput });
 }
 
