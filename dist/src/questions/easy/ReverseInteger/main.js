@@ -45,7 +45,7 @@ function run() {
 
     var attemptAnswer = (0, _utils.timeFunction)('Attempt', _attempt2.default, [input]);
     var correctAnswer = (0, _utils.timeFunction)('Answer', _answer2.default, [integerInput]);
-    var userPassed = (0, _utils.arraysEqual)(correctAnswer, attemptAnswer);
+    var userPassed = correctAnswer === attemptAnswer;
 
     return {
         passed: userPassed,

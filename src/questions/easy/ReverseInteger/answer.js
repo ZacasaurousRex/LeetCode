@@ -9,7 +9,7 @@ export default function reverse(integerInput) {
         inputReversed = (inputReversed * 10) + digit;
     }
 
-    if (inputReversed > (2 ** 31) - 1) {
+    if (inputReversed > Math.pow(2, 31) - 1) {
         return 0;
     }
     return sign * inputReversed;

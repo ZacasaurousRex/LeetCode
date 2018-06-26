@@ -37,7 +37,7 @@ export function run() {
 
     const attemptAnswer = timeFunction('Attempt', attempt, [input]);
     const correctAnswer = timeFunction('Answer', answer, [integerInput]);
-    const userPassed = arraysEqual(correctAnswer, attemptAnswer);
+    const userPassed = correctAnswer === attemptAnswer;
 
     return {
         passed: userPassed,
