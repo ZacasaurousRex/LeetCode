@@ -11,14 +11,17 @@ exports.convertWindowsPathToUnix = convertWindowsPathToUnix;
 exports.logUserInput = logUserInput;
 exports.expectedInputErrorMessage = expectedInputErrorMessage;
 exports.verifyInputConformance = verifyInputConformance;
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function log(string) {
-    console.log(string);
+    console.log(string); // eslint-disable-line no-console
 }
 
 function timeFunction(label, callback, arrayOfArguments) {
-    console.time(label + ' took');
-    var result = callback.apply(null, arrayOfArguments);
-    console.timeEnd(label + ' took');
+    console.time(label + ' took'); // eslint-disable-line no-console
+    var result = callback.apply(undefined, _toConsumableArray(arrayOfArguments));
+    console.timeEnd(label + ' took'); // eslint-disable-line no-console
     return result;
 }
 

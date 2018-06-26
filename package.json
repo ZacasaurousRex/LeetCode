@@ -4,7 +4,7 @@
   "description": "A node project containing my solutions to leetcode questions.",
   "main": "main.js",
   "scripts": {
-    "lint": "eslint ./Questions/ && eslint ./main.js",
+    "lint": "eslint ./src/ && eslint ./main.js",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "start": "npm run lint && npm run build && node dist/main.js"
   },

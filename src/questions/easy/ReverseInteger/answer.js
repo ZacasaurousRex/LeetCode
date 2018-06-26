@@ -1,6 +1,7 @@
 export default function reverse(integerInput) {
-    let inputReversed = 0;
     const sign = integerInput > 0 ? 1 : -1;
+    const thirtyTwoBitSignedInt = Math.pow(2, 31) - 1;// eslint-disable-line
+    let inputReversed = 0;
     let tempInput = sign * integerInput;
 
     while (tempInput > 0) {
@@ -9,7 +10,7 @@ export default function reverse(integerInput) {
         inputReversed = (inputReversed * 10) + digit;
     }
 
-    if (inputReversed > Math.pow(2, 31) - 1) {
+    if (inputReversed > thirtyTwoBitSignedInt) {
         return 0;
     }
     return sign * inputReversed;

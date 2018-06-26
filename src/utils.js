@@ -1,11 +1,11 @@
 export function log(string) {
-    console.log(string);
+    console.log(string);// eslint-disable-line no-console
 }
 
 export function timeFunction(label, callback, arrayOfArguments) {
-    console.time(`${label} took`);
-    const result = callback.apply(null, arrayOfArguments);
-    console.timeEnd(`${label} took`);
+    console.time(`${label} took`);// eslint-disable-line no-console
+    const result = callback(...arrayOfArguments);
+    console.timeEnd(`${label} took`);// eslint-disable-line no-console
     return result;
 }
 
