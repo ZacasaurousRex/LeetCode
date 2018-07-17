@@ -8,7 +8,7 @@ const questionName = 'PalindromeNumber';
 const input = process.argv[3];
 const inputExample = 123;
 
-function logQuestionetails(integerInput) {
+function logQuestionDetails(integerInput) {
     log('Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.');
     log('Example 1:\n'
         + '\tInput: 121\n'
@@ -35,7 +35,7 @@ export function verifyQuestionConformance() {
 
 export function run() {
     const integerInput = parseInt(input);
-    logQuestionetails(integerInput);
+    logQuestionDetails(integerInput);
 
     const attemptAnswer = timeFunction('Attempt', attempt, [integerInput]);
     const correctAnswer = timeFunction('Answer', answer, [integerInput]);

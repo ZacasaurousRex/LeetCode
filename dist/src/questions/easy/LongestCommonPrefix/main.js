@@ -18,7 +18,7 @@ var questionName = 'LongestCommonPrefix';
 var input = process.argv[3];
 var inputExample = ['flower', 'flow', 'flight'];
 
-function logQuestionetails(userInput) {
+function logQuestionDetails(userInput) {
     (0, _utils.log)('Write a function to find the longest common prefix string amongst an array of strings.' + 'If there is no common prefix, return an empty string "".');
     (0, _utils.log)('Example 1:' + 'Input: ["flower","flow","flight"]' + 'Output: "fl"');
     (0, _utils.logUserInput)({ Input: userInput });
@@ -29,7 +29,7 @@ function verifyQuestionConformance() {
 }
 
 function run() {
-    logQuestionetails(input);
+    logQuestionDetails(input);
     var correctAnswer = (0, _utils.timeFunction)('Answer', _answer2.default, [input]);
 
     return {

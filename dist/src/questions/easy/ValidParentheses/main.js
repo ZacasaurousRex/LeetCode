@@ -18,7 +18,7 @@ var questionName = 'LongestCommonPrefix';
 var input = process.argv[3];
 var inputExample = '()[]{}';
 
-function logQuestionetails(userInput) {
+function logQuestionDetails(userInput) {
     (0, _utils.log)('Given a string containing just the characters \'(\', \')\', \'{\', \'}\', \'[\' and \']\', determine if the input string is valid.');
     (0, _utils.log)('An input string is valid if:' + '\tOpen brackets must be closed by the same type of brackets.' + '\tOpen brackets must be closed in the correct order.' + 'An empty string is also considered valid.');
     (0, _utils.log)('Example 1:' + '\tInput: "()"' + '\tOutput: true');
@@ -32,7 +32,7 @@ function verifyQuestionConformance() {
 }
 
 function run() {
-    logQuestionetails(input);
+    logQuestionDetails(input);
     var correctAnswer = (0, _utils.timeFunction)('Answer', _answer2.default, [input]);
 
     return {

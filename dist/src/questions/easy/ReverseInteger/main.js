@@ -22,7 +22,7 @@ var questionName = 'ReverseInteger';
 var input = process.argv[3];
 var inputExample = 123;
 
-function logQuestionetails(integerInput) {
+function logQuestionDetails(integerInput) {
     (0, _utils.log)('Given a 32-bit signed integer, reverse digits of an integer.');
     (0, _utils.log)('Example 1:\n' + '\tInput: 123\n' + '\tOutput: 321');
     (0, _utils.log)('Example 2:\n' + '\tInput: -123\n' + '\tOutput: -321');
@@ -41,7 +41,7 @@ function verifyQuestionConformance() {
 
 function run() {
     var integerInput = parseInt(input);
-    logQuestionetails(integerInput);
+    logQuestionDetails(integerInput);
 
     var attemptAnswer = (0, _utils.timeFunction)('Attempt', _attempt2.default, [integerInput]);
     var correctAnswer = (0, _utils.timeFunction)('Answer', _answer2.default, [integerInput]);

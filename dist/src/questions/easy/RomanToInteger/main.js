@@ -18,7 +18,7 @@ var questionName = 'RomanToInteger';
 var romanNumeralInput = process.argv[3].toUpperCase();
 var inputExample = 'IV';
 
-function logQuestionetails(romanNumeral) {
+function logQuestionDetails(romanNumeral) {
     (0, _utils.log)('Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.');
     (0, _utils.log)('Symbol       Value\n' + 'I            1\n' + 'V            5\n' + 'X            10\n' + 'L            50\n' + 'C            100\n' + 'D            500\n' + 'M            1000');
     (0, _utils.log)('For example, two is written as II in Roman numeral, just two one\'s added together. Twelve is written as, XII,' + ' which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.');
@@ -46,7 +46,7 @@ function verifyQuestionConformance() {
 }
 
 function run() {
-    logQuestionetails(romanNumeralInput);
+    logQuestionDetails(romanNumeralInput);
 
     var correctAnswer = (0, _utils.timeFunction)('Answer', _answer2.default, [romanNumeralInput]);
     var userPassed = false;

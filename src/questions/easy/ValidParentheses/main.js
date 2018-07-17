@@ -7,7 +7,7 @@ const questionName = 'LongestCommonPrefix';
 const input = process.argv[3];
 const inputExample = '()[]{}';
 
-function logQuestionetails(userInput) {
+function logQuestionDetails(userInput) {
     log('Given a string containing just the characters \'(\', \')\', \'{\', \'}\', \'[\' and \']\', determine if the input string is valid.');
     log('An input string is valid if:'
         + '\tOpen brackets must be closed by the same type of brackets.'
@@ -30,7 +30,7 @@ export function verifyQuestionConformance() {
 }
 
 export function run() {
-    logQuestionetails(input);
+    logQuestionDetails(input);
     const correctAnswer = timeFunction('Answer', answer, [input]);
 
     return {

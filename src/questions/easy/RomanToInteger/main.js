@@ -7,7 +7,7 @@ const questionName = 'RomanToInteger';
 const romanNumeralInput = process.argv[3].toUpperCase();
 const inputExample = 'IV';
 
-function logQuestionetails(romanNumeral) {
+function logQuestionDetails(romanNumeral) {
     log('Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.');
     log('Symbol       Value\n'
         + 'I            1\n'
@@ -59,7 +59,7 @@ export function verifyQuestionConformance() {
 }
 
 export function run() {
-    logQuestionetails(romanNumeralInput);
+    logQuestionDetails(romanNumeralInput);
 
     const correctAnswer = timeFunction('Answer', answer, [romanNumeralInput]);
     const userPassed = false;

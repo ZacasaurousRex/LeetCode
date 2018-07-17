@@ -37,9 +37,9 @@ var secondList = {
 };
 var inputExample = [firstList, secondList];
 
-function logQuestionetails() {
+function logQuestionDetails() {
     (0, _utils.log)('Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.');
-    (0, _utils.log)('Example:' + '\tInput: 1->2->4, 1->3->4\n' + '\tOutput: 1->1->2->3->4->4');
+    (0, _utils.log)('Example:\n' + '\tInput: 1->2->4, 1->3->4\n' + '\tOutput: 1->1->2->3->4->4');
     var firstListAsString = JSON.stringify(firstList);
     var secondListAsString = JSON.stringify(secondList);
     (0, _utils.logUserInput)({ firstListAsString: firstListAsString, secondListAsString: secondListAsString });
@@ -50,7 +50,7 @@ function verifyQuestionConformance() {
 }
 
 function run() {
-    logQuestionetails();
+    logQuestionDetails();
     var correctAnswer = (0, _utils.timeFunction)('Answer', _answer2.default, [firstList, secondList]);
 
     return {

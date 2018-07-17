@@ -1,13 +1,13 @@
 import answer from './answer';
 import {
-    log, verifyInputConformance, logUserInput, timeFunction,
+    verifyInputConformance, timeFunction, log, logUserInput,
 } from '../../../utils';
 
 const questionName = 'LongestCommonPrefix';
 const input = process.argv[3];
 const inputExample = ['flower', 'flow', 'flight'];
 
-function logQuestionetails(userInput) {
+function logQuestionDetails(userInput) {
     log('Write a function to find the longest common prefix string amongst an array of strings.'
         + 'If there is no common prefix, return an empty string "".');
     log('Example 1:'
@@ -21,7 +21,7 @@ export function verifyQuestionConformance() {
 }
 
 export function run() {
-    logQuestionetails(input);
+    logQuestionDetails(input);
     const correctAnswer = timeFunction('Answer', answer, [input]);
 
     return {

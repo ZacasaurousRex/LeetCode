@@ -22,7 +22,7 @@ var questionName = 'PalindromeNumber';
 var input = process.argv[3];
 var inputExample = 123;
 
-function logQuestionetails(integerInput) {
+function logQuestionDetails(integerInput) {
     (0, _utils.log)('Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.');
     (0, _utils.log)('Example 1:\n' + '\tInput: 121\n' + '\tOutput: true');
     (0, _utils.log)('Example 2:\n' + '\tInput: -121\n' + '\tOutput: false\n' + '\tExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.');
@@ -41,7 +41,7 @@ function verifyQuestionConformance() {
 
 function run() {
     var integerInput = parseInt(input);
-    logQuestionetails(integerInput);
+    logQuestionDetails(integerInput);
 
     var attemptAnswer = (0, _utils.timeFunction)('Attempt', _attempt2.default, [integerInput]);
     var correctAnswer = (0, _utils.timeFunction)('Answer', _answer2.default, [integerInput]);

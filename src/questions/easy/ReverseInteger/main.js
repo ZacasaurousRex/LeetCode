@@ -8,7 +8,7 @@ const questionName = 'ReverseInteger';
 const input = process.argv[3];
 const inputExample = 123;
 
-function logQuestionetails(integerInput) {
+function logQuestionDetails(integerInput) {
     log('Given a 32-bit signed integer, reverse digits of an integer.');
     log('Example 1:\n'
         + '\tInput: 123\n'
@@ -33,7 +33,7 @@ export function verifyQuestionConformance() {
 
 export function run() {
     const integerInput = parseInt(input);
-    logQuestionetails(integerInput);
+    logQuestionDetails(integerInput);
 
     const attemptAnswer = timeFunction('Attempt', attempt, [integerInput]);
     const correctAnswer = timeFunction('Answer', answer, [integerInput]);
