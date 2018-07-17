@@ -6,7 +6,7 @@ export function logUserInput(inputObject) {
     log('User input for question:');
     for (let index = 0; index < Object.keys(inputObject).length; index++) {
         const key = Object.keys(inputObject)[index];
-        log(`${key}: ${inputObject[key]}`);
+        log(`\t${key}: ${inputObject[key]}`);
     }
 }
 

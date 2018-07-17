@@ -14,7 +14,7 @@ function logUserInput(inputObject) {
     log('User input for question:');
     for (var index = 0; index < Object.keys(inputObject).length; index++) {
         var key = Object.keys(inputObject)[index];
-        log(key + ': ' + inputObject[key]);
+        log('\t' + key + ': ' + inputObject[key]);
     }
 }
 
