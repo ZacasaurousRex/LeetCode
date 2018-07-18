@@ -3,7 +3,7 @@ import {
     log, verifyInputConformance, logUserInput, timeFunction,
 } from '../../../utils';
 
-const questionName = 'LongestCommonPrefix';
+const questionName = 'RemoveElement';
 const inputExample = [[3, 2, 2, 3], 3];
 
 function logQuestionDetails() {

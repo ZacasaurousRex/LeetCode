@@ -3,7 +3,7 @@ import {
     log, verifyInputConformance, logUserInput, timeFunction,
 } from '../../../utils';
 
-const questionName = 'LongestCommonPrefix';
+const questionName = 'RemoveDuplicatesFromSortedArray';
 const inputExample = [1, 1, 2];
 
 function logQuestionDetails() {

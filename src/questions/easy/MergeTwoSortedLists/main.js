@@ -3,7 +3,7 @@ import {
     log, verifyInputConformance, logUserInput, timeFunction,
 } from '../../../utils';
 
-const questionName = 'LongestCommonPrefix';
+const questionName = 'MergeTwoSortedLists';
 const firstList = {
     val: 1,
     next: {

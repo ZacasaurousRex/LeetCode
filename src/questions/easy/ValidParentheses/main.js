@@ -3,7 +3,7 @@ import {
     log, verifyInputConformance, logUserInput, timeFunction,
 } from '../../../utils';
 
-const questionName = 'LongestCommonPrefix';
+const questionName = 'ValidParentheses';
 const input = process.argv[3];
 const inputExample = '()[]{}';
 
