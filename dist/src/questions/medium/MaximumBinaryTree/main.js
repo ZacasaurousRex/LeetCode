@@ -14,7 +14,7 @@ var _utils = require('../../../utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var questionName = 'LongestCommonPrefix';
+var questionName = 'MaximumBinaryTree';
 var inputExample = [3, 2, 1, 6, 0, 5];
 
 function logQuestionDetails() {

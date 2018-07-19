@@ -14,7 +14,7 @@ var _utils = require('../../../utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var questionName = 'LongestCommonPrefix';
+var questionName = 'ValidParentheses';
 var input = process.argv[3];
 var inputExample = '()[]{}';
 
