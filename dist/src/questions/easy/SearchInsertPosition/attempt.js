@@ -5,8 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = searchInsert;
 function searchInsert(nums, target) {
-    console.log(nums);
-    console.log(target);
     if (nums.length === 0) return 0;
     for (var i = 0; i < nums.length; i++) {
         if (nums[i] === target) {
